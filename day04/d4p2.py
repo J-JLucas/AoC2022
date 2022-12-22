@@ -39,7 +39,7 @@ def main():
         y1 = int(y1)
         y2 = int(y2)
 
-        # determine if one range is encapuslated by the other
+        # determine if ranges overlap
         if x1 == x2 or y1 == y2:        # if two start/end points equal there's overlap
             total+=1
         elif x1 <= x2 and x2 <= y1:
