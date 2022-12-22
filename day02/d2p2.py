@@ -1,7 +1,9 @@
-# A = X = Rock = 1
-# B = Y = Paper = 2
-# C = Z = Scissors = 3
-# loss = 0, draw = 3, win = 6
+# A = Rock = 1
+# B = Paper = 2
+# C = Scissors = 3
+# X = must lose = 0
+# Y = must draw = 3
+# Z = must win = 6
 
 score, result = 0, 0
 p1,p2 = "", ""
@@ -16,11 +18,11 @@ for i in f.readlines():
     # determine result
     if p2 == "A":
         if p1 == "X":
-            result = 4
-        elif p1 == "Y":
-            result = 8
-        else:
             result = 3
+        elif p1 == "Y":
+            result = 4
+        else:
+            result = 8
     if p2 == "B":
         if p1 == "X":
             result = 1
@@ -30,11 +32,11 @@ for i in f.readlines():
             result = 9
     if p2 == "C":
         if p1 == "X":
-            result = 7
-        elif p1 == "Y":
             result = 2
-        else:
+        elif p1 == "Y":
             result = 6
+        else:
+            result = 7
     score = score + result
 # close file and print result
 f.close()
