@@ -1,6 +1,6 @@
 # This script reads two pairs of ranges from a file
-# and determines if one range is entirely encapulated by the other
-# prints count of total encapulations
+# and determines if the two ranges overlap
+# prints count of total overlaps
 
 def read_int(a, i):
     '''
